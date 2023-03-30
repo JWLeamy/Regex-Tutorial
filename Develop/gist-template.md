@@ -1,11 +1,19 @@
-# Title (replace with your title)
+# What is a Regex?
 
-A regex is a sequence of Meta Characters
-characters that do not indicate a single literal character, but instead indicates a more generalized pattern.
+A regex (short for regular expression) is a sequence of Meta Characters used to describe a search pattern. </br>
+Meta characters are simply characters that do not indicate a single literal character, but instead indicates a more generalized pattern.</br>
+
+In other words, a Regex is just a mega-amplified version of a command F search.
 
 ## Summary
+The following statement is an example of a regex.
+```
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+ /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ 
+ ```
+ This particular regex is designed to search for URL links within a given body of text. 
+ </br> </br> USES: lets say we are given a list that contains thousands of different words and characters. Somewhere within that list however, there are 5 unique URL's we are trying to find. Rather than scanning through each item on the list, 
+ we would use this particular Regex to identify a list item that meets our searchpattern (in this case - find a URL)
 
 ## Table of Contents
 
@@ -22,6 +30,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+
 It is neccesaryy to wrap any and all regular expressions within slash marks (/). The slash marks denote the start and finish of a Regex, and all characters within the two symbols are cosidered 'Components'.
 
 ### Anchors
@@ -55,10 +64,22 @@ Character classes help define sepecifics sets of characters for our regex statem
 
 ```\s``` —Matches a single whitespace character, including tabs and line breaks
 
+<br> 
+If we look at our example URL regex, we use multiple character classes to help fufill certain match requirements. <br>
+
+/^(https?:\/\/)?([``\d``a-z\.-]+)\.([a-z\.]{2,6})([\/```\w``` \.-]*)*\/?$/ 
+
 
 
 ### Flags
+The only time that you will ever add a character OUTSIDE you starting and closing slash marks (/) is for flag use. A flag can define additional functionality and limitation to the regex when added to the right of your closing slash mark. Some common flags are
+<br>
 
+```g```—Global search: the regex should be tested against all possible matches in a string.
+
+```i```—Case-insensitive search: case should be ignored while attempting a match in a string
+
+```m```—Multi-line search: a multi-line input string should be treated as multiple lines
 ### Grouping and Capturing
 
 ### Bracket Expressions
