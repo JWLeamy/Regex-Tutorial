@@ -44,12 +44,25 @@ In our example, we see that aside from our slash marks that capture the regex, i
 ### OR Operator
 
 ### Character Classes
+Character classes help define sepecifics sets of characters for our regex statement to follow. Some common character classes include
+
+```.``` —Matches any character except the newline character ```\n```
+
+```\d``` —Matches any Arabic numeral digit. This class is equivalent to the bracket expression ```[0-9]```.
+
+```\w``` —Matches any alphanumeric character from the basic Latin alphabet, including the underscore (_). This class is equivalent to the bracket expression ```[A-Za-z0-9_]```.
+
+
+```\s``` —Matches a single whitespace character, including tabs and line breaks
+
+
 
 ### Flags
 
 ### Grouping and Capturing
 
 ### Bracket Expressions
+The content within a Bracket Expression ```[]```, classifies the range of characters the expression is trying to both match & include. 
 
 ### Greedy and Lazy Match
 
