@@ -1,0 +1,10 @@
+A regex is a sequence of Meta Characters
+- characters that do not indicate a single literal character, but instead indicates a more generalized pattern.
+
+Allows you to identify certain poatterns within a group of text
+
+/d => any digit from 0-9
+
+. => any character
+
+* => any number or charcter
