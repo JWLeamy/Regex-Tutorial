@@ -68,7 +68,19 @@ https?          `?` Matches 'https' or 'http' once.
 
 
 ### OR Operator
-The OR Operator ```|``` allows us to specificy specific characters even further than character classes.
+
+The OR Operator ```|``` allows us to specificy our search within subexpressions even further. Using this operator enables the regex search criteria to look for varying types of subexpressions rather than a direct match.
+
+For example, if we take the expression <br>
+```(fly):(run)``` <br>
+The seaarch criteria of this statmenet would look for an exact match of those specific characters. In other words, "fly:run" would appear, but fyl:nru would not, even thought they contain similar characters.
+
+If we add the OR operator, the expression ```(f|l|y):(r|u|n)``` would now recognize any combination of the three subexpression characters. 
+
+```(fyl:rnu), (ylf:nru), (f:r), etc```
+
+<br>
+
 ### Character Classes
 Character classes help define sepecifics sets of characters for our regex statement to follow. Some common character classes include
 
@@ -124,6 +136,13 @@ The terms 'Greedy' and 'Lazy' are simple ways of classifing the type of quantifi
 The lazy quantifier, denoted by a ```?```, matches the least amount of items posible. 
 
 ### Boundaries
+
+Boundaries are just symbols that denote the start and end of different words and expressions within a given regex. The Anchors ```^``` and ```$``` that we covered earlier are technically boundaries, as they signify the start and end of a full regex expressions. Other noteworthy boundaries are: </br>
+
+```\b``` - A word boundary. Used to set the boundary between a full word and its preceding characters. The expression \bfly\b would search for "fly", but fail to recognize "flying", "flyfishing, or "butterfly" <br>
+
+```\B``` - A NON-word boundary denotes the opposite. 
+
 
 ### Back-references
 
