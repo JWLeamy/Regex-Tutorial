@@ -9,7 +9,6 @@ In other words, a Regex is just a mega-amplified version of a command F search.
 ## Summary
 The following statement is an example of a regex.
 ```
-
  /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ 
  ```
  This particular regex is designed to search for URL links within a given body of text. 
@@ -141,13 +140,38 @@ Boundaries are just symbols that denote the start and end of different words and
 
 ```\b``` - A word boundary. Used to set the boundary between a full word and its preceding characters. The expression \bfly\b would search for "fly", but fail to recognize "flying", "flyfishing, or "butterfly" <br>
 
-```\B``` - A NON-word boundary denotes the opposite. 
+```\B``` - Similar to \b, a NON-word boundary denotes aboundary between your chosen word and NON-word. For example, ```\Bking``` will grab the word "king" for words like "taking", "mocking", or "kingly". 
+
+Both reference positions, not actual characters. 
 
 
 ### Back-references
 
+Backk references are mainly used to match repeating patterns, words, or characters within the type of expression you are tryinfg to find. <br>
+Back references are denoted by a backslash ```\```, followed by the number of references you are trying to identify. You can reuse the same backreferencemore than once. 
+
+For example, the expression ```([a-c])x\1x\1``` can match ```axaxa, bxbxb, and cxcxc```
+
 ### Look-ahead and Look-behind
+Look ahead and look behind assertions are similar to our starting and ending boundaries/anchors mentioned above. The difference however, is that these assertions (also known as "lookarounds") do not actually consume any characters within a stiring, but simply assert whether or not the match you are searching for is even possible. 
+
+"Look-ahead" statements check to see whether or not the characters following a match meet scertain criteria, wheras look-behind statments check the character that precede a match. 
+
+The look behind statement ```(?<=$)\d``` will match any combination of digits immeditayl following a dollar sign. 
+
+The look ahead statement ```q(?=u)``` will match any instance of q that is followed by a u. 
 
 ## Author
+Im John Leamy,
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+An aspiring develeoper with a drive to conceptualize, create, and ultimately provide useful full stack applications.
+
+Since writing my first line of code only four months ago, I've expanded my skillset across multiple programming languages and frameworks.
+
+This includes (but is not limited to) / JavaScript / Github / Node.js / Express.js / OOP / ORM / Heroku / MySQL / React & More.
+
+If you want to conect, I encourage you to link with me on <a href="https://www.linkedin.com/in/john-leamy-b68676238/">LinkedIn! </a>
+
+I also invite you to check out my <a href="https://github.com/jwleamy">Github</a> and view my other projects, applications, and walkthoughs such as this one.
+
+    
